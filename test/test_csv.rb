@@ -11,14 +11,14 @@ class CsvTest < Test::Unit::TestCase
 
     data = User.all
     
-    assert_equal data.to_csv_rails,
+    assert_equal data.to_csv,
       "#{user1.id},User 1,user1@email.com\n#{user2.id},User 2,user2@email.com\n"
   end
 
   def test_export_with_empty_data
     data = User.all
 
-    assert_equal data.to_csv_rails,
+    assert_equal data.to_csv,
       ""
   end
 
@@ -28,7 +28,7 @@ class CsvTest < Test::Unit::TestCase
 
     data = User.all
 
-    assert_equal data.to_csv_rails(:only => [:name]),
+    assert_equal data.to_csv(:only => [:name]),
       "User 1\nUser 2\n"
   end
 
@@ -38,7 +38,7 @@ class CsvTest < Test::Unit::TestCase
 
     data = User.all
 
-    assert_equal data.to_csv_rails(:except => [:id, :name]),
+    assert_equal data.to_csv(:except => [:id, :name]),
       "user1@email.com\nuser2@email.com\n"
   end
 
@@ -48,7 +48,7 @@ class CsvTest < Test::Unit::TestCase
 
     data = User.all
 
-    assert_equal data.to_csv_rails(:headers => [:id, :name, :email]),
+    assert_equal data.to_csv(:headers => [:id, :name, :email]),
       "id,name,email\n#{user1.id},User 1,user1@email.com\n#{user2.id},User 2,user2@email.com\n"
   end
 end
