@@ -1,6 +1,7 @@
 # to\_csv\_rails
 
-[![Build Status](https://secure.travis-ci.org/fernandomm/to_csv_rails.png?branch=master)][travis]
+[![Build Status](https://api.travis-ci.org/fernandomm/to_csv_rails.png?branch=master)][travis]
+[travis]: http://travis-ci.org/fernandomm/to_csv_rails
 
 to\_csv\_rails implements a to_csv method on your Arrays. It makes exporting records to csv a simple task, even when using responders.
 
