@@ -59,3 +59,5 @@ To:
         format.csv { render csv: @users }
       end
     end    
+
+Accessing /users.csv will return your users in csv format.
