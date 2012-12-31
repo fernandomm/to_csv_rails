@@ -14,6 +14,7 @@ class Array
 
     columns += Array(options[:methods])
 
+    # Keep id column always in first position, if present.
     if columns.index(:id)
       columns.delete(:id)
       columns.unshift(:id)
