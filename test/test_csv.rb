@@ -11,15 +11,15 @@ class CsvTest < Test::Unit::TestCase
 
     data = User.all
     
-    assert_equal data.to_csv,
-      "#{user1.id},User 1,user1@email.com\n#{user2.id},User 2,user2@email.com\n"
+    assert_equal "#{user1.id},user1@email.com,User 1\n#{user2.id},user2@email.com,User 2\n",
+      data.to_csv
   end
 
   def test_export_with_empty_data
     data = User.all
 
-    assert_equal data.to_csv,
-      ""
+    assert_equal "",
+      data.to_csv
   end
 
   def test_export_with_only_option
@@ -28,8 +28,8 @@ class CsvTest < Test::Unit::TestCase
 
     data = User.all
 
-    assert_equal data.to_csv(:only => [:name]),
-      "User 1\nUser 2\n"
+    assert_equal "User 1\nUser 2\n",
+      data.to_csv(:only => [:name])
   end
 
   def test_export_with_except_option
@@ -38,8 +38,8 @@ class CsvTest < Test::Unit::TestCase
 
     data = User.all
 
-    assert_equal data.to_csv(:except => [:id, :name]),
-      "user1@email.com\nuser2@email.com\n"
+    assert_equal "user1@email.com\nuser2@email.com\n",
+      data.to_csv(:except => [:id, :name])
   end
 
   def test_export_with_headers_option
@@ -48,7 +48,7 @@ class CsvTest < Test::Unit::TestCase
 
     data = User.all
 
-    assert_equal data.to_csv(:headers => [:id, :name, :email]),
-      "id,name,email\n#{user1.id},User 1,user1@email.com\n#{user2.id},User 2,user2@email.com\n"
+    assert_equal "id,name,email\n#{user1.id},user1@email.com,User 1\n#{user2.id},user2@email.com,User 2\n",
+      data.to_csv(:headers => [:id, :name, :email])
   end
 end
