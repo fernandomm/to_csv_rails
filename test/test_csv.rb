@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class CsvTest < Test::Unit::TestCase
+class CsvTest < Minitest::Test
   def teardown
     User.destroy_all
   end
