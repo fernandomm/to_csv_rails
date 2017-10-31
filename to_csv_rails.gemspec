@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
   s.homepage    = "http://fernandomarcelo.com/"
   s.summary     = %q{An to_csv implementation for Rails framework}
   s.description = %q{An to_csv implementation focused on making it easier for Rails developers to export data to CSV format.}
-  s.files = Dir["lib/**/*", "README.md"]
+  s.files = Dir["lib/**/*", "CHANGELOG.md", "README.md"]
 
   s.add_dependency("activerecord", ">= 3.2")
 
