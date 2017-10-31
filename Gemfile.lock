@@ -27,7 +27,8 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  activerecord (~> 5.1)
+  activerecord (~> 5.1.0)
+  minitest
   rake
   sqlite3
 
