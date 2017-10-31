@@ -1,6 +1,6 @@
 require 'rubygems'
 require 'active_record'
-require 'test/unit'
+require 'minitest/autorun'
 require 'to_csv_rails'
 
 ActiveRecord::Base.establish_connection(:adapter => "sqlite3", :database => ":memory:")
