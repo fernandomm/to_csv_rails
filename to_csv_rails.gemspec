@@ -13,7 +13,5 @@ Gem::Specification.new do |s|
 
   s.add_dependency("activerecord", ">= 3.2")
 
-  if RUBY_VERSION < "1.9.0"
-    s.add_dependency('fastercsv')
-  end
+  s.required_ruby_version = '>= 2.0'
 end

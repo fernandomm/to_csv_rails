@@ -21,7 +21,7 @@ module ToCsvRails
         columns.unshift(:id)
       end
 
-      output = CSV_HANDLER.generate(Hash.new(options[:csv_options])) do |csv|
+      output = CSV.generate(Hash.new(options[:csv_options])) do |csv|
 
         csv << options[:headers] unless options[:headers].nil?
 
