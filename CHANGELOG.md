@@ -12,3 +12,6 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Removed
 - Drop support to Ruby < 2
+
+[Unreleased]: https://github.com/fernandomm/to_csv_rails/compare/v0.2...HEAD
+[0.2]: https://github.com/fernandomm/to_csv_rails/compare/v0.1...v0.2
